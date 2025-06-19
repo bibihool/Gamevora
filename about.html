@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gamevora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(120deg, #3a7be0 0%, #16a34a 100%);
+            color: #fff;
+            padding: 3.5rem 0 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 32px 32px;
+        }
+        .about-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+        .about-hero p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .about-section {
+            max-width: 900px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+            padding: 2.5rem 2rem;
+        }
+        .about-section h2 {
+            color: #3a7be0;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .about-section p, .about-section ul {
+            font-size: 1.08rem;
+            color: #222;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        .about-section ul {
+            padding-left: 1.5rem;
+        }
+        .about-team {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .about-team-member {
+            flex: 1 1 220px;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px 0 rgba(58,123,224,0.06);
+        }
+        .about-team-member i {
+            font-size: 2.2rem;
+            color: #3a7be0;
+            margin-bottom: 0.5rem;
+        }
+        .about-team-member h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+        .about-team-member p {
+            font-size: 0.98rem;
+            color: #444;
+        }
+        .about-contact {
+            background: #e0e7ff;
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .about-contact a {
+            color: #3a7be0;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .about-section { padding: 1.2rem 0.7rem; }
+            .about-team { flex-direction: column; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Gamevora</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about-hero">
+            <h1>About Gamevora</h1>
+            <p>Your Trusted Source for Gaming Gear Reviews &amp; Recommendations</p>
+            <p style="font-size:1.1rem;opacity:0.92;max-width:600px;margin:0 auto;">Gamevora is dedicated to helping gamers and enthusiasts find the best gaming products through independent reviews, expert guides, and real-world testing.</p>
+        </section>
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>At <strong>Gamevora</strong>, our mission is to make your gaming gear decisions easy, informed, and trustworthy. We independently test and review the latest gaming accessories, peripherals, and hardware to help you find what truly matters for your setup—whether you're a competitive gamer, a streamer, or just want the best experience for your budget.</p>
+        </section>
+        <section class="about-section">
+            <h2>How We Review &amp; Recommend</h2>
+            <ul>
+                <li><strong>Independent Testing:</strong> We buy or receive products and test them hands-on, just like you would use them at home or in competition.</li>
+                <li><strong>Expert Research:</strong> Our team combines years of gaming experience with interviews, data, and feedback from real users and industry experts.</li>
+                <li><strong>Affiliate Disclosure:</strong> We may earn commissions when you buy through our links, but our recommendations are always based on merit, not on affiliate deals. If you return a product, we don't get paid—so our only incentive is to help you find the best gear.</li>
+                <li><strong>Transparency:</strong> We clearly explain why we picked each product, and we welcome feedback and fact-checking from our readers.</li>
+            </ul>
+        </section>
+        <section class="about-section">
+            <h2>Editorial Standards</h2>
+            <p>We strive to be the most trusted product review and recommendation service for gamers. Our editorial process is independent and rigorous—no manufacturer or advertiser can influence our picks. We spend dozens of hours researching, testing, and comparing products, and we only recommend gear we'd use ourselves or suggest to friends and family.</p>
+        </section>
+        <section class="about-section">
+            <h2>Meet the Team</h2>
+            <div class="about-team">
+                <div class="about-team-member">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Reviewers &amp; Testers</h3>
+                    <p>Our passionate gamers and hardware enthusiasts put every product through real-world tests, from marathon gaming sessions to competitive play.</p>
+                </div>
+                <div class="about-team-member">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3>Writers &amp; Editors</h3>
+                    <p>We turn our findings into clear, honest, and actionable guides so you can make the best buying decisions—fast.</p>
+                </div>
+                <div class="about-team-member">
+                    <i class="fas fa-users"></i>
+                    <h3>Community &amp; Support</h3>
+                    <p>We listen to your feedback, answer your questions, and help you get the most out of your gaming gear.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-section about-contact">
+            <h2>Contact &amp; Feedback</h2>
+            <p>Have a question, suggestion, or need help with a buying decision? <br>
+            Reach out to us at <a href="mailto:contact@gamevora.com">contact@gamevora.com</a> or use our <a href="contact.html">contact form</a>. We love hearing from fellow gamers!</p>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gamevora</h3>
+                <p>Your trusted source for gaming gear reviews and recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gamevora. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Guide to Mechanical Keyboards | Gamevora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #f8fafc; }
+        .affiliate-disclaimer {
+            background: #fffbe6;
+            color: #b38b00;
+            border: 1px solid #ffe58f;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 2rem auto 1.5rem auto;
+            max-width: 800px;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .blog-hero {
+            background: linear-gradient(120deg, #3a7be0 0%, #16a34a 100%);
+            padding: 3.5rem 0 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 32px 32px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .blog-hero .featured-badge {
+            display: inline-block;
+            background: #fff;
+            color: #3a7be0;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.4em 1.3em;
+            border-radius: 24px;
+            box-shadow: 0 2px 8px 0 rgba(58,123,224,0.10);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.03em;
+        }
+        .blog-hero h1 {
+            font-size: 2.7rem;
+            font-weight: 900;
+            margin-bottom: 1.1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-shadow: 0 2px 12px rgba(58,123,224,0.10);
+        }
+        .blog-hero .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7em;
+        }
+        .blog-hero .hero-subtitle i {
+            color: #ffe066;
+            font-size: 1.3em;
+        }
+        .blog-hero .hero-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .blog-hero img {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.13);
+            border: 4px solid #fff;
+        }
+        .blog-hero .hero-meta {
+            margin-top: 1.2rem;
+            font-size: 1.08rem;
+            color: #e0e7ff;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        .toc {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            margin: 2.5rem 0 2rem 0;
+            max-width: 320px;
+            position: sticky;
+            top: 2rem;
+            float: right;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+        }
+        .toc h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin: 0.7rem 0; }
+        .toc a { color: #3a7be0; text-decoration: none; font-weight: 600; }
+        .toc a:hover { text-decoration: underline; }
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 2.5rem 0;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+            padding: 1.5rem 1rem;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 800px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1.1rem 0.7rem;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: middle;
+        }
+        .comparison-table th {
+            background: #e0e7ff;
+            color: #1a237e;
+            font-size: 1.08rem;
+            font-weight: 700;
+            border-top: none;
+        }
+        .comparison-table tr.our-pick {
+            background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%);
+            font-weight: 700;
+            border-left: 4px solid #3a7be0;
+        }
+        .comparison-table tr.best-value {
+            background: linear-gradient(90deg, #dcfce7 0%, #f8fafc 100%);
+            font-weight: 700;
+            border-left: 4px solid #16a34a;
+        }
+        .comparison-table td img {
+            max-width: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+        }
+        .comparison-table .cta-cell a {
+            display: inline-block;
+            background: linear-gradient(90deg, #3a7be0 0%, #16a34a 100%);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 6px;
+            padding: 0.5em 1.2em;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background 0.2s;
+        }
+        .comparison-table .cta-cell a:hover {
+            background: linear-gradient(90deg, #245bb2 0%, #15803d 100%);
+        }
+        .comparison-table td .feature-icon {
+            color: #16a34a;
+            margin-right: 0.2em;
+        }
+        .affiliate-product-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin: 2.5rem 0;
+            padding: 2rem 2rem 2rem 2rem;
+            position: relative;
+            border: 2px solid #e0e7ff;
+        }
+        .affiliate-product-box .badge {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.2rem;
+            background: #3a7be0;
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.3em 1em;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px 0 rgba(58,123,224,0.08);
+        }
+        .affiliate-product-img {
+            max-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+        }
+        .affiliate-product-details { flex: 1; }
+        .affiliate-product-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .affiliate-product-price {
+            color: #16a34a;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+        }
+        .affiliate-product-cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #3a7be0 0%, #16a34a 100%);
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7em 2em;
+            font-size: 1.1em;
+            text-decoration: none;
+            margin-top: 1.2em;
+            box-shadow: 0 2px 8px 0 rgba(58,123,224,0.10);
+            transition: background 0.2s;
+        }
+        .affiliate-product-cta:hover {
+            background: linear-gradient(90deg, #245bb2 0%, #15803d 100%);
+        }
+        .trust-badges {
+            margin-top: 1.2em;
+            display: flex;
+            gap: 1.2em;
+            align-items: center;
+        }
+        .trust-badge {
+            background: #e0e7ff;
+            color: #3a7be0;
+            font-size: 0.95em;
+            padding: 0.3em 1em;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .pros-cons { display: flex; gap: 2rem; margin-top: 1rem; }
+        .pros, .cons { flex: 1; }
+        .pros ul, .cons ul { padding-left: 1.2rem; }
+        .pros strong, .cons strong { font-size: 1.05em; }
+        @media (max-width: 1100px) {
+            .toc { float: none; position: static; max-width: 100%; margin: 2rem 0; }
+        }
+        @media (max-width: 800px) {
+            .affiliate-product-box { flex-direction: column; align-items: stretch; padding: 1.2rem; }
+            .toc { max-width: 100%; }
+        }
+        @media (max-width: 700px) {
+            .blog-hero h1 { font-size: 2rem; }
+            .blog-hero .hero-image img { max-width: 98vw; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <!-- ... your existing header code ... -->
+    </header>
+    <main>
+        <div class="affiliate-disclaimer">
+            <strong>Disclosure:</strong> This post contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you. <span style="font-size:0.95em;">As an Amazon Associate and affiliate, we earn from qualifying purchases. This helps support our work and keeps the site running!</span>
+        </div>
+        <section class="blog-hero">
+            <div class="featured-badge"><i class="fas fa-trophy"></i> Editor's Top Keyboard Picks 2024</div>
+            <h1>The Ultimate Guide to Mechanical Keyboards</h1>
+            <div class="hero-subtitle"><i class="fas fa-keyboard"></i> Our expert picks for the best mechanical keyboards for gaming and typing in 2024.</div>
+            <div class="hero-image">
+                <img src="images/keyboards/keyboard-guide-hero.jpg" alt="Ultimate Mechanical Keyboard Guide">
+            </div>
+            <div class="hero-meta">By Gamevora Team &nbsp;|&nbsp; June 2024</div>
+        </section>
+        <nav class="toc">
+            <h2>Quick Navigation</h2>
+            <ul>
+                <li><a href="#comparison">Comparison Table</a></li>
+                <li><a href="#pick1">1. SteelSeries Apex Pro Gen 3</a></li>
+                <li><a href="#pick2">2. Razer Huntsman V2</a></li>
+                <li><a href="#pick3">3. Logitech G915 TKL</a></li>
+                <li><a href="#pick4">4. Keychron K8 Pro</a></li>
+                <li><a href="#pick5">5. Corsair K70 RGB Pro</a></li>
+                <li><a href="#faq">FAQ & Conclusion</a></li>
+            </ul>
+        </nav>
+        <section id="comparison">
+            <h2>Quick Comparison Table</h2>
+            <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Image</th>
+                        <th>Switch Type</th>
+                        <th>Form Factor</th>
+                        <th>Connection</th>
+                        <th>Backlight</th>
+                        <th>Price</th>
+                        <th>Features</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="our-pick">
+                        <td><span style="color:#3a7be0;font-weight:700;">SteelSeries Apex Pro Gen 3<br><span style="font-size:0.95em;">Our Pick</span></span></td>
+                        <td><img src="images/keyboards/steelseries-apex-pro-gen3-black.jpg" alt="SteelSeries Apex Pro Gen 3"></td>
+                        <td>OmniPoint 3.0 Magnetic</td>
+                        <td>Full-size</td>
+                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                        <td>$199</td>
+                        <td><i class="fas fa-bolt feature-icon"></i> Adjustable Switches<br><i class="fas fa-display feature-icon"></i> OLED Display</td>
+                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=SteelSeries+Apex+Pro+Gen+3" target="_blank" rel="nofollow noopener">View</a></td>
+                    </tr>
+                    <tr class="best-value">
+                        <td><span style="color:#16a34a;font-weight:700;">Razer Huntsman V2<br><span style="font-size:0.95em;">Best Value</span></span></td>
+                        <td><img src="images/keyboards/razer-huntsman-v2.jpg" alt="Razer Huntsman V2"></td>
+                        <td>Optical (Linear/Clicky)</td>
+                        <td>Full-size</td>
+                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                        <td>$179</td>
+                        <td><i class="fas fa-tachometer-alt feature-icon"></i> Fast Response<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
+                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Razer+Huntsman+V2" target="_blank" rel="nofollow noopener">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Logitech G915 TKL</td>
+                        <td><img src="images/keyboards/logitech-g915-tkl.jpg" alt="Logitech G915 TKL"></td>
+                        <td>GL Tactile/Linear/Clicky</td>
+                        <td>TKL</td>
+                        <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
+                        <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
+                        <td>$229</td>
+                        <td><i class="fas fa-battery-full feature-icon"></i> Long Battery<br><i class="fas fa-wifi feature-icon"></i> Low Latency</td>
+                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Logitech+G915+TKL" target="_blank" rel="nofollow noopener">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Keychron K8 Pro</td>
+                        <td><img src="images/keyboards/keychron-k8-pro.jpg" alt="Keychron K8 Pro"></td>
+                        <td>Gateron/Hot-Swap</td>
+                        <td>TKL</td>
+                        <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
+                        <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
+                        <td>$99</td>
+                        <td><i class="fas fa-exchange-alt feature-icon"></i> Hot-Swap<br><i class="fas fa-bluetooth feature-icon"></i> Bluetooth</td>
+                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Keychron+K8+Pro" target="_blank" rel="nofollow noopener">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Corsair K70 RGB Pro</td>
+                        <td><img src="images/keyboards/corsair-k70-rgb-pro.jpg" alt="Corsair K70 RGB Pro"></td>
+                        <td>Cherry MX</td>
+                        <td>Full-size</td>
+                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                        <td>$159</td>
+                        <td><i class="fas fa-memory feature-icon"></i> Onboard Memory<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
+                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Corsair+K70+RGB+Pro" target="_blank" rel="nofollow noopener">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+        <section id="pick1" class="affiliate-product-box">
+            <span class="badge">Our Pick</span>
+            <img class="affiliate-product-img" src="images/keyboards/steelseries-apex-pro-gen3-black.jpg" alt="SteelSeries Apex Pro Gen 3">
+            <div class="affiliate-product-details">
+                <div class="affiliate-product-title">1. SteelSeries Apex Pro Gen 3</div>
+                <div class="affiliate-product-price">$199 · Full-size · OmniPoint 3.0</div>
+                <p>The Apex Pro Gen 3 is a premium mechanical keyboard with adjustable magnetic switches, per-key RGB, and an OLED display for ultimate customization and performance.</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros</strong>
+                        <ul>
+                            <li>OmniPoint 3.0 adjustable switches</li>
+                            <li>OLED Smart Display</li>
+                            <li>Per-key RGB</li>
+                            <li>Premium build quality</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <strong>Cons</strong>
+                        <ul>
+                            <li>Expensive</li>
+                            <li>Wired only</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/s?k=SteelSeries+Apex+Pro+Gen+3" class="affiliate-product-cta" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Brand</span>
+                    <span class="trust-badge"><i class="fas fa-star"></i> Editor's Choice</span>
+                </div>
+            </div>
+        </section>
+        <section id="pick2" class="affiliate-product-box">
+            <span class="badge" style="background:#16a34a;">Best Value</span>
+            <img class="affiliate-product-img" src="images/keyboards/razer-huntsman-v2.jpg" alt="Razer Huntsman V2">
+            <div class="affiliate-product-details">
+                <div class="affiliate-product-title">2. Razer Huntsman V2</div>
+                <div class="affiliate-product-price">$179 · Full-size · Optical</div>
+                <p>The Razer Huntsman V2 features ultra-fast optical switches, per-key RGB, and dedicated media controls, making it a great value for gamers and typists alike.</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros</strong>
+                        <ul>
+                            <li>Optical switches (linear/clicky)</li>
+                            <li>Media controls</li>
+                            <li>Per-key RGB</li>
+                            <li>Comfortable wrist rest</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <strong>Cons</strong>
+                        <ul>
+                            <li>No wireless option</li>
+                            <li>Software required for full features</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/s?k=Razer+Huntsman+V2" class="affiliate-product-cta" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Brand</span>
+                    <span class="trust-badge"><i class="fas fa-tag"></i> Best Value</span>
+                </div>
+            </div>
+        </section>
+        <section id="pick3" class="affiliate-product-box">
+            <img class="affiliate-product-img" src="images/keyboards/logitech-g915-tkl.jpg" alt="Logitech G915 TKL">
+            <div class="affiliate-product-details">
+                <div class="affiliate-product-title">3. Logitech G915 TKL</div>
+                <div class="affiliate-product-price">$229 · TKL · Wireless</div>
+                <p>The Logitech G915 TKL is a wireless, low-profile mechanical keyboard with customizable RGB, long battery life, and a compact tenkeyless design.</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros</strong>
+                        <ul>
+                            <li>Wireless and low latency</li>
+                            <li>Long battery life</li>
+                            <li>Low-profile switches</li>
+                            <li>Compact TKL design</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <strong>Cons</strong>
+                        <ul>
+                            <li>Expensive</li>
+                            <li>No wrist rest</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/s?k=Logitech+G915+TKL" class="affiliate-product-cta" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Brand</span>
+                </div>
+            </div>
+        </section>
+        <section id="pick4" class="affiliate-product-box">
+            <img class="affiliate-product-img" src="images/keyboards/keychron-k8-pro.jpg" alt="Keychron K8 Pro">
+            <div class="affiliate-product-details">
+                <div class="affiliate-product-title">4. Keychron K8 Pro</div>
+                <div class="affiliate-product-price">$99 · TKL · Hot-Swap</div>
+                <p>The Keychron K8 Pro is a hot-swappable, wireless TKL keyboard with Bluetooth, RGB, and a great price for custom keyboard enthusiasts.</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros</strong>
+                        <ul>
+                            <li>Hot-swappable switches</li>
+                            <li>Bluetooth & wired</li>
+                            <li>Affordable</li>
+                            <li>Good build quality</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <strong>Cons</strong>
+                        <ul>
+                            <li>Basic keycaps</li>
+                            <li>Software is basic</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/s?k=Keychron+K8+Pro" class="affiliate-product-cta" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Brand</span>
+                </div>
+            </div>
+        </section>
+        <section id="pick5" class="affiliate-product-box">
+            <img class="affiliate-product-img" src="images/keyboards/corsair-k70-rgb-pro.jpg" alt="Corsair K70 RGB Pro">
+            <div class="affiliate-product-details">
+                <div class="affiliate-product-title">5. Corsair K70 RGB Pro</div>
+                <div class="affiliate-product-price">$159 · Full-size · Cherry MX</div>
+                <p>The Corsair K70 RGB Pro is a classic full-size mechanical keyboard with Cherry MX switches, per-key RGB, and dedicated media controls for a premium experience.</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros</strong>
+                        <ul>
+                            <li>Cherry MX switches</li>
+                            <li>Onboard memory</li>
+                            <li>Media controls</li>
+                            <li>Sturdy build</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <strong>Cons</strong>
+                        <ul>
+                            <li>Wired only</li>
+                            <li>Pricey for features</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/s?k=Corsair+K70+RGB+Pro" class="affiliate-product-cta" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Brand</span>
+                </div>
+            </div>
+        </section>
+        <section id="faq">
+            <h2>FAQ & Conclusion</h2>
+            <p><strong>What is the best mechanical keyboard for gaming?</strong> The SteelSeries Apex Pro Gen 3 and Logitech G915 TKL are top choices for gaming due to their fast switches and features.</p>
+            <p><strong>What is hot-swappable?</strong> Hot-swappable keyboards let you change switches without soldering, making customization easy.</p>
+            <p>For more in-depth reviews and testing data, check out <a href="https://www.rtings.com/keyboard/reviews/best/by-usage/gaming" target="_blank">RTINGS Best Gaming Keyboard Guide</a>.</p>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <!-- ... your existing footer code ... -->
+    </footer>
+</body>
+</html> 

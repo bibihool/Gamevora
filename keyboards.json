@@ -1,0 +1,38 @@
+[
+  {
+    "name": "SteelSeries Apex Pro Gen 3 Gaming Keyboard - Black",
+    "category": "Gaming Keyboards",
+    "brand": "SteelSeries",
+    "price": 1549.00,
+    "description": "The SteelSeries Apex Pro Gen 3 is a full-size, premium gaming keyboard featuring OmniPoint 3.0 Adjustable HyperMagnetic switches, per-key RGB, and a programmable OLED Smart Display. Designed for esports and enthusiast gamers, it offers ultra-fast actuation, customizable key response, and a robust aluminum top plate for durability.",
+    "image": "images/keyboards/steelseries-apex-pro-gen3-black.jpg",
+    "rating": 4.8,
+    "rating_count": 87,
+    "stock": 10,
+    "specs": {
+      "switch_type": "OmniPoint 3.0 Adjustable HyperMagnetic (Hall Effect)",
+      "form_factor": "Full-size (100%)",
+      "keycap_material": "Double Shot PBT",
+      "backlight": "Per-key RGB",
+      "connection": "Wired USB-C (detachable braided cable)",
+      "polling_rate": "1000Hz",
+      "n_key_rollover": "Yes",
+      "media_controls": "OLED Smart Display, Scroll Wheel",
+      "wrist_rest": "Magnetic, included",
+      "dimensions": "43.7 x 13.9 x 4.0 cm",
+      "weight": "1.098 kg",
+      "features": [
+        "OmniPoint 3.0 Adjustable HyperMagnetic switches",
+        "Rapid Trigger, Rapid Tap, Protection Mode",
+        "OLED Smart Display",
+        "Dynamic per-key RGB illumination",
+        "Detachable USB-C braided cable",
+        "Magnetic wrist rest",
+        "SteelSeries GG software support",
+        "Programmable macros"
+      ],
+      "compatibility": "Windows, macOS, Linux"
+    },
+    "status": "active"
+  }
+] 

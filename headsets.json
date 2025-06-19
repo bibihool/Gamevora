@@ -1,0 +1,35 @@
+{
+    "products": [
+        {
+            "name": "Logitech G PRO X Wireless Lightspeed Gaming Headset",
+            "category": "Headsets",
+            "brand": "Logitech",
+            "price": 799.00,
+            "description": "The Logitech G PRO X Wireless is a professional-grade gaming headset featuring LIGHTSPEED wireless technology, Blue VO!CE microphone technology, and PRO-G 50mm drivers. Designed for esports professionals and serious gamers, it offers exceptional sound quality, comfort, and wireless freedom.",
+            "image": "images/headsets/logitech-g-pro-x-wireless.jpg",
+            "rating": 4.8,
+            "rating_count": 156,
+            "stock": 25,
+            "specs": {
+                "driver": "PRO-G 50mm",
+                "frequency_response": "20Hz-20kHz",
+                "microphone": "Blue VO!CE",
+                "connectivity": "LIGHTSPEED Wireless",
+                "battery_life": "Up to 20 hours",
+                "weight": "350g",
+                "compatibility": "PC, PS4, PS5, Nintendo Switch",
+                "features": [
+                    "LIGHTSPEED Wireless Technology",
+                    "Blue VO!CE Microphone Technology",
+                    "PRO-G 50mm Drivers",
+                    "DTS Headphone:X 2.0 Surround Sound",
+                    "Memory Foam Ear Pads",
+                    "Aluminum and Steel Construction",
+                    "On-board Controls",
+                    "Detachable Microphone"
+                ]
+            },
+            "status": "active"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamevora - Your Ultimate Gaming Gear Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Gamevora</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search gaming gear...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Find Your Perfect Gaming Setup</h2>
+                <p>Expert reviews and recommendations for the best gaming gear</p>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <a href="products.html?category=Gaming%20Headsets" class="category-card">
+                    <img src="images/headsets.jpg" alt="Gaming Headsets">
+                    <h3>Gaming Headsets</h3>
+                </a>
+                <a href="products.html?category=Gaming%20Keyboards" class="category-card">
+                    <img src="images/keyboards.jpg" alt="Gaming Keyboards">
+                    <h3>Gaming Keyboards</h3>
+                </a>
+                <a href="products.html?category=Gaming%20Mice" class="category-card">
+                    <img src="images/mice.jpg" alt="Gaming Mice">
+                    <h3>Gaming Mice</h3>
+                </a>
+                <a href="products.html?category=Gaming%20Monitors" class="category-card">
+                    <img src="images/monitors.jpg" alt="Gaming Monitors">
+                    <h3>Gaming Monitors</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Top Picks</h2>
+            <div id="featured-products-grid" class="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </section>
+
+        <section class="latest-blog-posts">
+            <h2>Latest from Our Blog</h2>
+            <div class="blog-grid" id="latest-blog-posts">
+                <!-- Blog posts will be loaded dynamically -->
+            </div>
+            <div class="blog-more">
+                <a href="blog.html" class="btn-primary">View All Posts</a>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest gaming gear reviews and recommendations</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gamevora</h3>
+                <p>Your trusted source for gaming gear reviews and recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gamevora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
