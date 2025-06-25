@@ -14,7 +14,7 @@ Gamevora is a modern affiliate marketing website focused on gaming gear reviews,
 
 ## Project Structure
 ```
-├──/htdocs
+├──htdocs/
    ├── images/
          ├── images files
    ├── about.html
