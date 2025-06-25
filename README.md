@@ -64,19 +64,6 @@ Gamevora is a modern affiliate marketing website focused on gaming gear reviews,
 7. **Access your site:**
    - Visit [http://localhost/gamevora/index.html](http://localhost/gamevora/index.html) or other pages in your browser to view the website.
 
-## Deployment on InfinityFree
-- Sign up at [InfinityFree](https://infinityfree.net/)
-- Create a new hosting account and upload your files to the `htdocs/` folder
-- Import your database and update `db.php` as described above
-- Your site will be live at `https://yourname.epizy.com/`
-
-## Contribution Guidelines
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
 ## License
 This project is for educational and demonstration purposes.
 
