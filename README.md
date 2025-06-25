@@ -39,28 +39,30 @@ Gamevora is a modern affiliate marketing website focused on gaming gear reviews,
 ### Prerequisites
 - PHP 7.x or higher
 - MySQL database
-- Web server (InfinityFree, XAMPP, etc.)
+- [XAMPP](https://www.apachefriends.org/) or another local web server
 
-### Setup Instructions
-1. **Clone the repository:**
-   ```
-   git clone https://github.com/yourusername/gamevora.git
-   ```
-2. **Upload all files** to your web server's root directory (e.g., `htdocs/` on InfinityFree).
-3. **Import the database:**
-   - Use phpMyAdmin to import `gamevora.sql` into your MySQL database.
-4. **Configure database connection:**
-   - Edit `db.php` with your database credentials:
+### Setup Instructions (Localhost/XAMPP)
+1. **Download and install XAMPP:**
+   - [XAMPP Download](https://www.apachefriends.org/index.html)
+2. **Clone or copy the repository:**
+   - Place all project files and folders into the `htdocs/` directory of your XAMPP installation (e.g., `C:/xampp/htdocs/gamevora/`).
+3. **Start Apache and MySQL** from the XAMPP Control Panel.
+4. **Import the database:**
+   - Open [phpMyAdmin](http://localhost/phpmyadmin/) in your browser.
+   - Create a new database (e.g., `gamevora`).
+   - Import the `gamevora.sql` file into this database.
+5. **Configure database connection:**
+   - Edit `db.php` with your local database credentials:
      ```php
-     $host = 'your-db-host';
-     $dbname = 'your-db-name';
-     $username = 'your-db-username';
-     $password = 'your-db-password';
+     $host = 'localhost';
+     $dbname = 'gamevora'; // or your chosen database name
+     $username = 'root';
+     $password = '';
      ```
-5. **(Optional) Run import scripts:**
-   - Visit `import_keyboard.php`, `import_product.php`, or `insert_blog_posts.php` in your browser if you need to import sample data.
-6. **Access your site:**
-   - Visit `index.html` or your deployed URL.
+6. **(Optional) Run import scripts:**
+   - In your browser, visit `http://localhost/gamevora/import_keyboard.php`, `import_product.php`, or `insert_blog_posts.php` if you need to import sample data.
+7. **Access your site:**
+   - Visit [http://localhost/gamevora/index.html](http://localhost/gamevora/index.html) or other pages in your browser to view the website.
 
 ## Deployment on InfinityFree
 - Sign up at [InfinityFree](https://infinityfree.net/)
