@@ -14,24 +14,26 @@ Gamevora is a modern affiliate marketing website focused on gaming gear reviews,
 
 ## Project Structure
 ```
-├── about.html
-├── blog.html
-├── blog_top5_gaming_mice_2024.html
-├── blog_ultimate_mechanical_keyboard_guide.html
-├── contact.html
-├── db.php
-├── get_products.php
-├── get_blog_posts.php
-├── import_keyboard.php
-├── import_product.php
-├── insert_blog_posts.php
-├── keyboards.json
-├── headsets.json
-├── products.html
-├── style.css
-├── main.js
-├── images/
-├── gamevora.sql
+├──/htdocs
+   ├── images/
+         ├── images files
+   ├── about.html
+   ├── blog.html
+   ├── blog_top5_gaming_mice_2024.html
+   ├── blog_ultimate_mechanical_keyboard_guide.html
+   ├── contact.html
+   ├── db.php
+   ├── get_products.php
+   ├── get_blog_posts.php
+   ├── import_keyboard.php
+   ├── import_product.php
+   ├── insert_blog_posts.php
+   ├── keyboards.json
+   ├── headsets.json
+   ├── products.html
+   ├── style.css
+   ├── main.js
+   ├── gamevora.sql
 └── ...
 ```
 
