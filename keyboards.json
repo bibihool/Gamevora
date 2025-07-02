@@ -1,38 +1,42 @@
-[
-  {
-    "name": "SteelSeries Apex Pro Gen 3 Gaming Keyboard - Black",
-    "category": "Gaming Keyboards",
-    "brand": "SteelSeries",
-    "price": 1549.00,
-    "description": "The SteelSeries Apex Pro Gen 3 is a full-size, premium gaming keyboard featuring OmniPoint 3.0 Adjustable HyperMagnetic switches, per-key RGB, and a programmable OLED Smart Display. Designed for esports and enthusiast gamers, it offers ultra-fast actuation, customizable key response, and a robust aluminum top plate for durability.",
-    "image": "images/keyboards/steelseries-apex-pro-gen3-black.jpg",
-    "rating": 4.8,
-    "rating_count": 87,
-    "stock": 10,
-    "specs": {
-      "switch_type": "OmniPoint 3.0 Adjustable HyperMagnetic (Hall Effect)",
-      "form_factor": "Full-size (100%)",
-      "keycap_material": "Double Shot PBT",
-      "backlight": "Per-key RGB",
-      "connection": "Wired USB-C (detachable braided cable)",
-      "polling_rate": "1000Hz",
-      "n_key_rollover": "Yes",
-      "media_controls": "OLED Smart Display, Scroll Wheel",
-      "wrist_rest": "Magnetic, included",
-      "dimensions": "43.7 x 13.9 x 4.0 cm",
-      "weight": "1.098 kg",
-      "features": [
-        "OmniPoint 3.0 Adjustable HyperMagnetic switches",
-        "Rapid Trigger, Rapid Tap, Protection Mode",
-        "OLED Smart Display",
-        "Dynamic per-key RGB illumination",
-        "Detachable USB-C braided cable",
-        "Magnetic wrist rest",
-        "SteelSeries GG software support",
-        "Programmable macros"
-      ],
-      "compatibility": "Windows, macOS, Linux"
-    },
-    "status": "active"
-  }
-] 
+{
+    "products": [
+        {
+            "name": "Razer Huntsman V2 Analog Optical Gaming Keyboard",
+            "category": "Gaming Keyboards",
+            "brand": "Razer",
+            "price": 719.00,
+            "description": "The Razer Huntsman V2 Analog is a revolutionary gaming keyboard featuring analog optical switches that provide precise control and faster response times. With per-key RGB lighting, premium aluminum construction, and advanced customization options, it's designed for competitive gamers who demand the ultimate in performance and precision.",
+            "image": "images/keyboards/razer-huntsman-v2.jpg",
+            "rating": 4.7,
+            "rating_count": 156,
+            "stock": 22,
+            "specs": {
+                "switch_type": "Razer Analog Optical Switches",
+                "form_factor": "Full-size (100%)",
+                "keycap_material": "Double Shot PBT",
+                "backlight": "Per-key RGB",
+                "connection": "Wired USB-C (detachable cable)",
+                "polling_rate": "8000Hz",
+                "n_key_rollover": "Yes",
+                "media_controls": "Dedicated media keys",
+                "wrist_rest": "Magnetic, included",
+                "dimensions": "44.5 x 14.4 x 3.5 cm",
+                "weight": "1.1 kg",
+                "compatibility": "Windows 10/11",
+                "features": [
+                    "Razer Analog Optical Switches",
+                    "8000Hz Polling Rate",
+                    "Per-key RGB with Razer Chroma",
+                    "Aluminum Top Plate",
+                    "Detachable USB-C Cable",
+                    "Magnetic Wrist Rest",
+                    "Razer Synapse 3 Support",
+                    "Analog Input Support",
+                    "Onboard Memory",
+                    "N-Key Rollover"
+                ]
+            },
+            "status": "active"
+        }
+    ]
+} 

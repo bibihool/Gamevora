@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "name": "Samsung 27-Inch Odyssey OLED G6 G60SD QHD 360Hz Gaming Monitor",
+            "category": "Gaming Monitors",
+            "brand": "Samsung",
+            "price": 2499.00,
+            "description": "The Samsung Odyssey OLED G6 is the world's first 360Hz OLED gaming monitor, featuring a 27-inch QHD display with perfect blacks, infinite contrast, and ultra-fast response times. Experience gaming like never before with OLED technology and 360Hz refresh rate for competitive advantage.",
+            "image": "images/monitors/samsung-odyssey-oled-g6.jpg",
+            "rating": 4.8,
+            "rating_count": 67,
+            "stock": 12,
+            "specs": {
+                "screen_size": "27 inches",
+                "resolution": "2560 x 1440 (QHD)",
+                "panel_type": "OLED",
+                "refresh_rate": "360Hz",
+                "response_time": "0.03ms (GTG)",
+                "aspect_ratio": "16:9",
+                "viewing_angle": "178° (H/V)",
+                "brightness": "250 cd/m²",
+                "contrast_ratio": "Infinite",
+                "color_gamut": "99.3% DCI-P3",
+                "connectivity": "DisplayPort 1.4, HDMI 2.1 x2",
+                "features": [
+                    "360Hz OLED Display",
+                    "0.03ms Response Time",
+                    "QHD 2560x1440 Resolution",
+                    "Infinite Contrast Ratio",
+                    "99.3% DCI-P3 Color Gamut",
+                    "AMD FreeSync Premium Pro",
+                    "NVIDIA G-SYNC Compatible",
+                    "HDR10+ Support",
+                    "Eye Saver Mode",
+                    "Flicker Free Technology",
+                    "Game Mode",
+                    "Black Equalizer",
+                    "Low Input Lag",
+                    "VESA Mount Compatible"
+                ]
+            },
+            "status": "active"
+        }
+    ]
+} 

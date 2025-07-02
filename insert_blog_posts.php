@@ -14,24 +14,52 @@ try {
             'category' => 'Gaming Gear',
             'tags' => 'gaming mice, gaming gear, mouse reviews',
             'status' => 'published',
-            'created_at' => date('Y-m-d H:i:s')
+            'created_at' => '2025-06-17 02:12:25',
+            'updated_at' => '2025-06-24 21:16:12',
         ],
         [
-            'title' => 'Best Gaming Keyboards 2024: Complete Buyer\'s Guide',
-            'slug' => 'best-gaming-keyboards-2024',
-            'content' => 'Explore our detailed guide to the best gaming keyboards of 2024, including mechanical, membrane, and hybrid options for every budget.',
-            'excerpt' => 'Your ultimate guide to choosing the perfect gaming keyboard in 2024, from budget options to premium mechanical keyboards.',
-            'featured_image' => 'images/blog/gaming-keyboards.jpg',
+            'title' => 'Top 5 Mechanical Keyboards in 2024',
+            'slug' => 'ultimate-mechanical-keyboard-guide',
+            'content' => 'Comprehensive guide to mechanical keyboards, switches, and features for gamers and typists.',
+            'excerpt' => 'Everything you need to know about mechanical keyboards for gaming.',
+            'featured_image' => 'images/blog/mechanical-keyboard-guide.jpg',
+            'author' => 'Jane Smith',
+            'category' => 'Gaming Gear',
+            'tags' => 'mechanical-keyboards, gaming, guides',
+            'status' => 'published',
+            'created_at' => '2025-06-17 02:12:25',
+            'updated_at' => '2025-06-24 00:55:45',
+        ],
+        [
+            'title' => 'The Ultimate Guide to Gaming Headsets',
+            'slug' => 'ultimate-gaming-headset-guide',
+            'content' => 'The ultimate guide to choosing the best gaming headset. Learn about sound quality, comfort, microphones, durability, and connectivity for gamers.',
+            'excerpt' => 'The ultimate guide to choosing the best gaming headset. Learn about sound quality, comfort, microphones, durability, and connectivity for gamers.',
+            'featured_image' => 'images/headsets.jpg',
             'author' => 'Gamevora Team',
             'category' => 'Gaming Gear',
-            'tags' => 'gaming keyboards, mechanical keyboards, keyboard guide',
+            'tags' => 'gaming headsets, headset guide, audio, comfort, microphone',
             'status' => 'published',
-            'created_at' => date('Y-m-d H:i:s')
-        ]
+            'created_at' => '2025-07-01 04:11:12',
+            'updated_at' => '2025-07-01 01:21:17',
+        ],
+        [
+            'title' => 'The Ultimate Guide to Monitors',
+            'slug' => 'ultimate-monitor-guide',
+            'content' => 'The ultimate guide to choosing the best monitor. Learn about resolution, refresh rate, response time, panel types, and connectivity options.',
+            'excerpt' => 'The ultimate guide to choosing the best monitor. Learn about resolution, refresh rate, response time, panel types, and connectivity options.',
+            'featured_image' => 'images/monitors.jpg',
+            'author' => 'Gamevora Team',
+            'category' => 'Gaming Gear',
+            'tags' => 'gaming monitors, monitor guide, resolution, refresh rate, panel type',
+            'status' => 'published',
+            'created_at' => '2025-07-02 00:22:42',
+            'updated_at' => '2025-07-01 21:22:42',
+        ],
     ];
 
-    $stmt = $pdo->prepare("INSERT INTO blog_posts (title, slug, content, excerpt, featured_image, author, category, tags, status, created_at) 
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    $stmt = $pdo->prepare("INSERT INTO blog_posts (title, slug, content, excerpt, featured_image, author, category, tags, status, created_at, updated_at) 
+                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                           ON DUPLICATE KEY UPDATE 
                           title = VALUES(title),
                           content = VALUES(content),
@@ -54,7 +82,8 @@ try {
             $post['category'],
             $post['tags'],
             $post['status'],
-            $post['created_at']
+            $post['created_at'],
+            $post['updated_at']
         ]);
     }
 

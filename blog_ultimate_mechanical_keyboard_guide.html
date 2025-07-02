@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Guide to Mechanical Keyboards | Gamevora</title>
+    <title>The Top 5 Mechanical Keyboards in 2024 | Gamevora</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -82,21 +82,23 @@
         }
         .toc {
             background: #fff;
-            border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            padding: 1.5rem;
             margin: 2.5rem 0 2rem 0;
-            max-width: 320px;
+            width: 280px;
             position: sticky;
             top: 2rem;
-            float: right;
             box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+            flex-shrink: 0;
         }
         .toc h2 { font-size: 1.2rem; margin-bottom: 1rem; }
         .toc ul { list-style: none; padding: 0; }
         .toc li { margin: 0.7rem 0; }
         .toc a { color: #3a7be0; text-decoration: none; font-weight: 600; }
         .toc a:hover { text-decoration: underline; }
+        #comparison {
+            text-align: center;
+        }
         .comparison-table-wrapper {
             overflow-x: auto;
             margin: 2.5rem 0;
@@ -104,6 +106,9 @@
             border-radius: 16px;
             box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
             padding: 1.5rem 1rem;
+            display: inline-block;
+            max-width: 100%;
+            text-align: left;
         }
         .comparison-table {
             width: 100%;
@@ -238,6 +243,10 @@
         .pros strong, .cons strong { font-size: 1.05em; }
         @media (max-width: 1100px) {
             .toc { float: none; position: static; max-width: 100%; margin: 2rem 0; }
+            .blog-main-container { flex-direction: column; }
+        }
+        @media (max-width: 900px) {
+            .comparison-table { min-width: 700px; font-size: 0.95em; }
         }
         @media (max-width: 800px) {
             .affiliate-product-box { flex-direction: column; align-items: stretch; padding: 1.2rem; }
@@ -247,114 +256,148 @@
             .blog-hero h1 { font-size: 2rem; }
             .blog-hero .hero-image img { max-width: 98vw; }
         }
+        .blog-main-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        .blog-content {
+            flex: 1;
+            min-width: 0;
+        }
     </style>
 </head>
 <body>
     <header class="main-header">
-        <!-- ... your existing header code ... -->
+        <div class="header-container">
+            <div class="logo">
+                <h1>Gamevora</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search blog posts...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
     </header>
     <main>
         <div class="affiliate-disclaimer">
             <strong>Disclosure:</strong> This post contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you. <span style="font-size:0.95em;">As an Amazon Associate and affiliate, we earn from qualifying purchases. This helps support our work and keeps the site running!</span>
         </div>
         <section class="blog-hero">
-            <div class="featured-badge"><i class="fas fa-trophy"></i> Editor's Top Keyboard Picks 2024</div>
-            <h1>The Ultimate Guide to Mechanical Keyboards</h1>
-            <div class="hero-subtitle"><i class="fas fa-keyboard"></i> Our expert picks for the best mechanical keyboards for gaming and typing in 2024.</div>
+            <div class="featured-badge"><i class="fas fa-trophy"></i> Top 5 Keyboards of 2024</div>
+            <h1>The Top 5 Mechanical Keyboards in 2024</h1>
+            <div class="hero-subtitle"><i class="fas fa-keyboard"></i> Our expert picks for the best mechanical keyboards you can buy this year.</div>
             <div class="hero-image">
-                <img src="images/keyboards/keyboard-guide-hero.jpg" alt="Ultimate Mechanical Keyboard Guide">
+                <img src="images/keyboards/keyboard-guide-hero.jpg" alt="Top 5 Mechanical Keyboards 2024">
             </div>
             <div class="hero-meta">By Gamevora Team &nbsp;|&nbsp; June 2024</div>
         </section>
-        <nav class="toc">
-            <h2>Quick Navigation</h2>
-            <ul>
-                <li><a href="#comparison">Comparison Table</a></li>
-                <li><a href="#pick1">1. SteelSeries Apex Pro Gen 3</a></li>
-                <li><a href="#pick2">2. Razer Huntsman V2</a></li>
-                <li><a href="#pick3">3. Logitech G915 TKL</a></li>
-                <li><a href="#pick4">4. Keychron K8 Pro</a></li>
-                <li><a href="#pick5">5. Corsair K70 RGB Pro</a></li>
-                <li><a href="#faq">FAQ & Conclusion</a></li>
-            </ul>
-        </nav>
-        <section id="comparison">
-            <h2>Quick Comparison Table</h2>
-            <div class="comparison-table-wrapper">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Image</th>
-                        <th>Switch Type</th>
-                        <th>Form Factor</th>
-                        <th>Connection</th>
-                        <th>Backlight</th>
-                        <th>Price</th>
-                        <th>Features</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="our-pick">
-                        <td><span style="color:#3a7be0;font-weight:700;">SteelSeries Apex Pro Gen 3<br><span style="font-size:0.95em;">Our Pick</span></span></td>
-                        <td><img src="images/keyboards/steelseries-apex-pro-gen3-black.jpg" alt="SteelSeries Apex Pro Gen 3"></td>
-                        <td>OmniPoint 3.0 Magnetic</td>
-                        <td>Full-size</td>
-                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
-                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
-                        <td>$199</td>
-                        <td><i class="fas fa-bolt feature-icon"></i> Adjustable Switches<br><i class="fas fa-display feature-icon"></i> OLED Display</td>
-                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=SteelSeries+Apex+Pro+Gen+3" target="_blank" rel="nofollow noopener">View</a></td>
-                    </tr>
-                    <tr class="best-value">
-                        <td><span style="color:#16a34a;font-weight:700;">Razer Huntsman V2<br><span style="font-size:0.95em;">Best Value</span></span></td>
-                        <td><img src="images/keyboards/razer-huntsman-v2.jpg" alt="Razer Huntsman V2"></td>
-                        <td>Optical (Linear/Clicky)</td>
-                        <td>Full-size</td>
-                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
-                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
-                        <td>$179</td>
-                        <td><i class="fas fa-tachometer-alt feature-icon"></i> Fast Response<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
-                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Razer+Huntsman+V2" target="_blank" rel="nofollow noopener">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Logitech G915 TKL</td>
-                        <td><img src="images/keyboards/logitech-g915-tkl.jpg" alt="Logitech G915 TKL"></td>
-                        <td>GL Tactile/Linear/Clicky</td>
-                        <td>TKL</td>
-                        <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
-                        <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
-                        <td>$229</td>
-                        <td><i class="fas fa-battery-full feature-icon"></i> Long Battery<br><i class="fas fa-wifi feature-icon"></i> Low Latency</td>
-                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Logitech+G915+TKL" target="_blank" rel="nofollow noopener">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Keychron K8 Pro</td>
-                        <td><img src="images/keyboards/keychron-k8-pro.jpg" alt="Keychron K8 Pro"></td>
-                        <td>Gateron/Hot-Swap</td>
-                        <td>TKL</td>
-                        <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
-                        <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
-                        <td>$99</td>
-                        <td><i class="fas fa-exchange-alt feature-icon"></i> Hot-Swap<br><i class="fas fa-bluetooth feature-icon"></i> Bluetooth</td>
-                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Keychron+K8+Pro" target="_blank" rel="nofollow noopener">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Corsair K70 RGB Pro</td>
-                        <td><img src="images/keyboards/corsair-k70-rgb-pro.jpg" alt="Corsair K70 RGB Pro"></td>
-                        <td>Cherry MX</td>
-                        <td>Full-size</td>
-                        <td><i class="fas fa-usb feature-icon"></i> Wired</td>
-                        <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
-                        <td>$159</td>
-                        <td><i class="fas fa-memory feature-icon"></i> Onboard Memory<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
-                        <td class="cta-cell"><a href="https://www.amazon.com/s?k=Corsair+K70+RGB+Pro" target="_blank" rel="nofollow noopener">View</a></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="blog-main-container">
+            <div class="blog-content">
+                <section id="comparison">
+                    <h2>Quick Comparison Table</h2>
+                    <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Image</th>
+                                <th>Switch Type</th>
+                                <th>Form Factor</th>
+                                <th>Connection</th>
+                                <th>Backlight</th>
+                                <th>Price</th>
+                                <th>Features</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="our-pick">
+                                <td><span style="color:#3a7be0;font-weight:700;">SteelSeries Apex Pro Gen 3<br><span style="font-size:0.95em;">Our Pick</span></span></td>
+                                <td><img src="images/keyboards/steelseries-apex-pro-gen3-black.jpg" alt="SteelSeries Apex Pro Gen 3"></td>
+                                <td>OmniPoint 3.0 Magnetic</td>
+                                <td>Full-size</td>
+                                <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                                <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                                <td>$199</td>
+                                <td><i class="fas fa-bolt feature-icon"></i> Adjustable Switches<br><i class="fas fa-display feature-icon"></i> OLED Display</td>
+                                <td class="cta-cell"><a href="https://amzn.to/4kcO7mB" target="_blank" rel="nofollow noopener">View</a></td>
+                            </tr>
+                            <tr class="best-value">
+                                <td><span style="color:#16a34a;font-weight:700;">Razer Huntsman V2<br><span style="font-size:0.95em;">Best Value</span></span></td>
+                                <td><img src="images/keyboards/razer-huntsman-v2.jpg" alt="Razer Huntsman V2"></td>
+                                <td>Optical (Linear/Clicky)</td>
+                                <td>Full-size</td>
+                                <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                                <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                                <td>$179</td>
+                                <td><i class="fas fa-tachometer-alt feature-icon"></i> Fast Response<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
+                                <td class="cta-cell"><a href="https://amzn.to/4l7W2mo" target="_blank" rel="nofollow noopener">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Logitech G915 TKL</td>
+                                <td><img src="images/keyboards/logitech-g915-tkl.jpg" alt="Logitech G915 TKL"></td>
+                                <td>GL Tactile/Linear/Clicky</td>
+                                <td>TKL</td>
+                                <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
+                                <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
+                                <td>$229</td>
+                                <td><i class="fas fa-battery-full feature-icon"></i> Long Battery<br><i class="fas fa-wifi feature-icon"></i> Low Latency</td>
+                                <td class="cta-cell"><a href="https://amzn.to/4nms4N7" target="_blank" rel="nofollow noopener">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Keychron K8 Pro</td>
+                                <td><img src="images/keyboards/keychron-k8-pro.jpg" alt="Keychron K8 Pro"></td>
+                                <td>Gateron/Hot-Swap</td>
+                                <td>TKL</td>
+                                <td><i class="fas fa-broadcast-tower feature-icon"></i> Wireless</td>
+                                <td><i class="fas fa-lightbulb feature-icon"></i> RGB</td>
+                                <td>$99</td>
+                                <td><i class="fas fa-exchange-alt feature-icon"></i> Hot-Swap<br><i class="fas fa-bluetooth feature-icon"></i> Bluetooth</td>
+                                <td class="cta-cell"><a href="https://amzn.to/3I3zc0B" target="_blank" rel="nofollow noopener">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Corsair K70 RGB Pro</td>
+                                <td><img src="images/keyboards/corsair-k70-rgb-pro.jpg" alt="Corsair K70 RGB Pro"></td>
+                                <td>Cherry MX</td>
+                                <td>Full-size</td>
+                                <td><i class="fas fa-usb feature-icon"></i> Wired</td>
+                                <td><i class="fas fa-lightbulb feature-icon"></i> Per-key RGB</td>
+                                <td>$159</td>
+                                <td><i class="fas fa-memory feature-icon"></i> Onboard Memory<br><i class="fas fa-volume-up feature-icon"></i> Media Controls</td>
+                                <td class="cta-cell"><a href="https://amzn.to/3I06PAx" target="_blank" rel="nofollow noopener">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <p>For more in-depth reviews and testing data, check out <a href="https://www.rtings.com/keyboard/reviews/best/by-usage/gaming" target="_blank">RTINGS Best Gaming Keyboard Guide</a>.</p>
+                </section>
             </div>
-        </section>
+            <nav class="toc">
+                <h2>Quick Navigation</h2>
+                <ul>
+                    <li><a href="#comparison">Comparison Table</a></li>
+                    <li><a href="#pick1">1. SteelSeries Apex Pro Gen 3</a></li>
+                    <li><a href="#pick2">2. Razer Huntsman V2</a></li>
+                    <li><a href="#pick3">3. Logitech G915 TKL</a></li>
+                    <li><a href="#pick4">4. Keychron K8 Pro</a></li>
+                    <li><a href="#pick5">5. Corsair K70 RGB Pro</a></li>
+                    <li><a href="#faq">FAQ & Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
         <section id="pick1" class="affiliate-product-box">
             <span class="badge">Our Pick</span>
             <img class="affiliate-product-img" src="images/keyboards/steelseries-apex-pro-gen3-black.jpg" alt="SteelSeries Apex Pro Gen 3">
@@ -509,15 +552,36 @@
                 </div>
             </div>
         </section>
-        <section id="faq">
-            <h2>FAQ & Conclusion</h2>
-            <p><strong>What is the best mechanical keyboard for gaming?</strong> The SteelSeries Apex Pro Gen 3 and Logitech G915 TKL are top choices for gaming due to their fast switches and features.</p>
-            <p><strong>What is hot-swappable?</strong> Hot-swappable keyboards let you change switches without soldering, making customization easy.</p>
-            <p>For more in-depth reviews and testing data, check out <a href="https://www.rtings.com/keyboard/reviews/best/by-usage/gaming" target="_blank">RTINGS Best Gaming Keyboard Guide</a>.</p>
-        </section>
+        </div>
     </main>
     <footer class="main-footer">
-        <!-- ... your existing footer code ... -->
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gamevora</h3>
+                <p>Your trusted source for gaming gear reviews and recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gamevora. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html> 

@@ -26,7 +26,7 @@ const sampleProducts = [
     // Add more sample products here
 ];
 
-// Create product card
+// Create product card (general)
 function createProductCard(product) {
     console.log('Creating product card for:', product); // Debug log
     
@@ -73,9 +73,9 @@ function createProductCard(product) {
                 </div>
             ` : ''}
             <div class="product-actions">
-                <button class="btn-primary add-to-cart" data-product-id="${product.id}">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </button>
+                <a class="btn-primary add-to-cart" href="${product.affiliate_link}" target="_blank" rel="noopener">
+                    <i class="fas fa-shopping-cart"></i> Buy on Amazon
+                </a>
                 <button class="btn-secondary add-to-wishlist" data-product-id="${product.id}">
                     <i class="far fa-heart"></i>
                 </button>
@@ -83,6 +83,28 @@ function createProductCard(product) {
         </div>
     `;
     
+    return card;
+}
+
+// Create a simplified product card for homepage featured products
+function createFeaturedProductCard(product) {
+    const card = document.createElement('div');
+    card.className = 'product-card featured-product-card';
+    const formattedPrice = `RM ${parseFloat(product.price).toFixed(2)}`;
+    card.innerHTML = `
+        <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="product-meta">
+                <span class="rating">
+                    <i class="fas fa-star"></i> ${product.rating}
+                </span>
+                <span class="price">${formattedPrice}</span>
+            </div>
+        </div>
+    `;
     return card;
 }
 
@@ -109,23 +131,19 @@ function generateStarRating(rating) {
 // Load featured products
 async function loadFeaturedProducts() {
     console.log('Loading featured products...'); // Debug log
-    
     const productsGrid = document.getElementById('featured-products-grid');
     if (!productsGrid) {
         console.error('Featured products grid not found!');
         return;
     }
-
     try {
-        const response = await fetch('get_products.php?sort=rating&limit=4');
+        const response = await fetch('get_products.php?sort=rating&limit=3');
         const data = await response.json();
-        
         console.log('Featured products response:', data); // Debug log
-
         if (data.status === 'success' && data.products.length > 0) {
             productsGrid.innerHTML = '';
-            data.products.forEach(product => {
-                const card = createProductCard(product);
+            data.products.slice(0, 3).forEach(product => {
+                const card = createFeaturedProductCard(product);
                 productsGrid.appendChild(card);
             });
         } else {
@@ -157,7 +175,19 @@ function handleSearch() {
 // Blog Post Functions
 function createBlogCard(post) {
     const tags = post.tags ? post.tags.split(',').map(tag => tag.trim()) : [];
-    
+    // Determine the correct link for the blog post
+    let postLink = '';
+    if (post.slug === 'top-5-gaming-mice-2024') {
+        postLink = 'blog_top5_gaming_mice_2024.html';
+    } else if (post.slug === 'ultimate-mechanical-keyboard-guide') {
+        postLink = 'blog_ultimate_mechanical_keyboard_guide.html';
+    } else if (post.slug === 'ultimate-gaming-headset-guide') {
+        postLink = 'blog-gaming-headset.html';
+    } else if (post.slug === 'ultimate-monitor-guide') {
+        postLink = 'blog-monitor-guide.html';
+    } else {
+        postLink = 'blog.html?post=' + post.slug;
+    }
     return `
         <article class="blog-card">
             <div class="blog-card-image">
@@ -169,7 +199,7 @@ function createBlogCard(post) {
                     <span><i class="far fa-calendar"></i> ${formatDate(post.created_at)}</span>
                     <span><i class="far fa-folder"></i> ${post.category}</span>
                 </div>
-                <h3><a href="blog-post.html?slug=${post.slug}">${post.title}</a></h3>
+                <h3><a href="${postLink}">${post.title}</a></h3>
                 <p class="blog-card-excerpt">${post.excerpt}</p>
                 <div class="blog-card-tags">
                     ${tags.map(tag => `<a href="blog.html?tag=${tag}" class="blog-tag">${tag}</a>`).join('')}
@@ -196,15 +226,27 @@ async function loadLatestBlogPosts() {
     try {
         const response = await fetch('get_blog_posts.php?limit=2');
         const data = await response.json();
-        
         console.log('Blog posts response:', data); // Debug log
 
         if (data.status === 'success' && data.posts.length > 0) {
             blogGrid.innerHTML = '';
             data.posts.forEach(post => {
+                // Determine the correct link for the blog post
+                let postLink = '';
+                if (post.slug === 'top-5-gaming-mice-2024') {
+                    postLink = 'blog_top5_gaming_mice_2024.html';
+                } else if (post.slug === 'ultimate-mechanical-keyboard-guide') {
+                    postLink = 'blog_ultimate_mechanical_keyboard_guide.html';
+                } else if (post.slug === 'ultimate-gaming-headset-guide') {
+                    postLink = 'blog-gaming-headset.html';
+                } else if (post.slug === 'ultimate-monitor-guide') {
+                    postLink = 'blog-monitor-guide.html';
+                } else {
+                    postLink = 'blog.html?post=' + post.slug;
+                }
+                console.log('Post link for', post.title, ':', postLink);
                 const card = document.createElement('div');
                 card.className = 'blog-card';
-                
                 // Format date
                 const date = new Date(post.created_at);
                 const formattedDate = date.toLocaleDateString('en-US', {
@@ -212,7 +254,6 @@ async function loadLatestBlogPosts() {
                     month: 'long',
                     day: 'numeric'
                 });
-
                 card.innerHTML = `
                     <div class="blog-image">
                         <img src="${post.featured_image}" alt="${post.title}">
@@ -223,17 +264,16 @@ async function loadLatestBlogPosts() {
                             <span class="date"><i class="fas fa-calendar"></i> ${formattedDate}</span>
                             <span class="category"><i class="fas fa-folder"></i> ${post.category}</span>
                         </div>
-                        <h3>${post.title}</h3>
+                        <h3><a href="${postLink}">${post.title}</a></h3>
                         <p>${post.excerpt}</p>
                         <div class="blog-tags">
                             ${post.tags.split(',').map(tag => `
                                 <span class="tag">${tag.trim()}</span>
                             `).join('')}
                         </div>
-                        <a href="${post.slug === 'top-5-gaming-mice-2024' ? 'blog_top5_gaming_mice_2024.html' : 'blog.html?post=' + post.slug}" class="btn-primary">Read More</a>
+                        <a href="${postLink}" class="btn-primary">Read More</a>
                     </div>
                 `;
-                
                 blogGrid.appendChild(card);
             });
         } else {
@@ -352,64 +392,46 @@ function updateBrandOptions(category) {
 
 async function loadProducts() {
     console.log('Loading products...'); // Debug log
-    
     const productsGrid = document.getElementById('products-grid');
-    const pagination = document.getElementById('pagination');
-    
+    const pagination = document.getElementById('products-pagination');
     if (!productsGrid) {
         console.error('Products grid element not found!');
         return;
     }
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    
     // Get filter values
-    const category = urlParams.get('category') || '';
+    const category = document.getElementById('product-category')?.value || '';
     const brand = document.getElementById('brand-filter')?.value || '';
-    const price = document.getElementById('price-filter')?.value || '';
     const sort = document.getElementById('sort-filter')?.value || '';
+    const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page') || 1;
-
-    console.log('Filter values:', { category, brand, price, sort, page }); // Debug log
-
     // Build query string
     const queryParams = new URLSearchParams({
         category: category,
         brand: brand,
-        price: price,
         sort: sort,
         page: page
     });
-
     try {
-        console.log('Fetching products from:', `get_products.php?${queryParams.toString()}`); // Debug log
-        
         const response = await fetch(`get_products.php?${queryParams.toString()}`);
         const data = await response.json();
-        
         console.log('Products API Response:', data); // Debug log
-
         if (data.status === 'success') {
             // Clear existing products
             productsGrid.innerHTML = '';
-            
             if (data.products.length === 0) {
                 console.log('No products found matching criteria'); // Debug log
                 productsGrid.innerHTML = '<div class="no-products">No products found matching your criteria.</div>';
-                pagination.innerHTML = '';
+                if (pagination) pagination.innerHTML = '';
                 return;
             }
-
             console.log(`Creating ${data.products.length} product cards`); // Debug log
-
             // Create product cards
             data.products.forEach(product => {
                 const card = createProductCard(product);
                 productsGrid.appendChild(card);
             });
-
             // Update pagination
-            updatePagination(data.current_page, data.total_pages);
+            if (pagination) updatePagination(data.current_page, data.total_pages);
         } else {
             console.error('Error loading products:', data.message);
             productsGrid.innerHTML = '<div class="error-message">Error loading products. Please try again later.</div>';
@@ -497,9 +519,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load products on the products page
     if (document.getElementById('products-grid')) {
         loadProducts();
-        
         // Add event listeners for filters
-        const filters = ['product-category', 'brand-filter', 'price-filter', 'sort-filter'];
+        const categorySelect = document.getElementById('product-category');
+        if (categorySelect) {
+            categorySelect.addEventListener('change', function() {
+                // Update URL parameter for category
+                const url = new URL(window.location);
+                url.searchParams.set('category', this.value);
+                window.history.replaceState({}, '', url);
+                // Update category title and description
+                const title = document.getElementById('category-title');
+                const desc = document.getElementById('category-description');
+                if (title) {
+                    title.textContent = this.value ? this.value : 'All Products';
+                }
+                if (desc) {
+                    switch (this.value) {
+                        case 'Gaming Headsets':
+                            desc.textContent = 'Browse our collection of premium gaming headsets.';
+                            break;
+                        case 'Gaming Keyboards':
+                            desc.textContent = 'Browse our collection of premium gaming keyboards.';
+                            break;
+                        case 'Gaming Mice':
+                            desc.textContent = 'Browse our collection of premium gaming mice.';
+                            break;
+                        case 'Gaming Monitors':
+                            desc.textContent = 'Browse our collection of premium gaming monitors.';
+                            break;
+                        default:
+                            desc.textContent = 'Browse our collection of premium gaming gear';
+                    }
+                }
+                loadProducts();
+            });
+        }
+        const filters = ['brand-filter', 'sort-filter'];
         filters.forEach(filterId => {
             const element = document.getElementById(filterId);
             if (element) {
@@ -566,6 +621,19 @@ async function loadAllBlogPosts(filters = {}) {
                 const formattedDate = date.toLocaleDateString('en-US', {
                     year: 'numeric', month: 'long', day: 'numeric'
                 });
+                // Determine the correct link for the blog post
+                let postLink = '';
+                if (post.slug === 'top-5-gaming-mice-2024') {
+                    postLink = 'blog_top5_gaming_mice_2024.html';
+                } else if (post.slug === 'ultimate-mechanical-keyboard-guide') {
+                    postLink = 'blog_ultimate_mechanical_keyboard_guide.html';
+                } else if (post.slug === 'ultimate-gaming-headset-guide') {
+                    postLink = 'blog-gaming-headset.html';
+                } else if (post.slug === 'ultimate-monitor-guide') {
+                    postLink = 'blog-monitor-guide.html';
+                } else {
+                    postLink = 'blog.html?post=' + post.slug;
+                }
                 // List style rendering
                 const item = document.createElement('div');
                 item.className = 'blog-list-item';
@@ -574,7 +642,7 @@ async function loadAllBlogPosts(filters = {}) {
                         <img src="${post.featured_image}" alt="${post.title}">
                     </div>
                     <div class="blog-list-content">
-                        <a class="blog-list-title" href="${post.slug === 'top-5-gaming-mice-2024' ? 'blog_top5_gaming_mice_2024.html' : (post.slug === 'ultimate-mechanical-keyboard-guide' ? 'blog_ultimate_mechanical_keyboard_guide.html' : 'blog.html?post=' + post.slug)}">${post.title}</a>
+                        <a class="blog-list-title" href="${postLink}">${post.title}</a>
                         <div class="blog-list-meta">
                             <span><i class="fas fa-user"></i> ${post.author}</span> &nbsp;|&nbsp; <span><i class="fas fa-calendar"></i> ${formattedDate}</span>
                         </div>

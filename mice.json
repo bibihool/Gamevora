@@ -1,0 +1,41 @@
+{
+    "products": [
+        {
+            "name": "Razer Viper V3 Pro Wireless Gaming Mouse",
+            "category": "Gaming Mice",
+            "brand": "Razer",
+            "price": 599.00,
+            "description": "The Razer Viper V3 Pro is the latest evolution of the legendary Viper series, featuring the new Focus Pro 35K optical sensor, HyperSpeed Wireless technology, and an ultra-lightweight design at just 54g. Built for esports with exceptional precision and speed.",
+            "image": "images/razer-viper-v3-pro.jpg",
+            "rating": 4.8,
+            "rating_count": 187,
+            "stock": 28,
+            "specs": {
+                "sensor": "Focus Pro 35K Optical",
+                "dpi": "100-35,000 DPI",
+                "ips": "750+ IPS",
+                "acceleration": "70G",
+                "connectivity": "HyperSpeed Wireless",
+                "battery_life": "Up to 95 hours",
+                "weight": "54g",
+                "buttons": "5 programmable",
+                "compatibility": "PC, Windows 10/11",
+                "features": [
+                    "Focus Pro 35K Optical Sensor",
+                    "HyperSpeed Wireless Technology",
+                    "Ultra-lightweight 54g Design",
+                    "Up to 95 Hours Battery Life",
+                    "5 Programmable Buttons",
+                    "Onboard Memory",
+                    "Optical Mouse Switches Gen-3",
+                    "PTFE Feet",
+                    "Ambidextrous Design",
+                    "Razer Synapse 3 Support",
+                    "Chroma RGB Lighting",
+                    "Quick DPI Switching"
+                ]
+            },
+            "status": "active"
+        }
+    ]
+} 

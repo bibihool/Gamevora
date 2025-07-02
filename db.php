@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$dbname = 'gamevora';
-$username = 'root';
-$password = '';
+$host = 'sql102.infinityfree.com';
+$dbname = 'if0_39310794_gamevora';
+$username = 'if0_39310794';
+$password = 'KHlsHaGaT5';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
