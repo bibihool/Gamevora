@@ -71,7 +71,7 @@ This project is for educational and demonstration purposes.
 
 ## Credits
 - Gamevora Team
-- [Font Awesome](https://fontawesome.com/) for icons
+- [Icon-icons](https://icon-icons.com/) for icons
 - [InfinityFree](https://infinityfree.net/) for free hosting
 
 ---
